@@ -1,6 +1,4 @@
-from project.data.variables import L,T,W
-from project.analysis import scatterPlot,correlation
-from project.linearRegression import oneVariable,twoVariable,threeVariable
+
 def run():
     print(W.describe())
     scatterPlot.scatterPlot()
