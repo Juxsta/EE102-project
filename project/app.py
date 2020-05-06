@@ -3,7 +3,17 @@ from project.analysis import scatterPlot,correlation
 from project.linearRegression import oneVariable,twoVariable,threeVariable
 
 def run():
+    print("Working Data")
     print(W.describe())
+    print(f"Mode\n {W.mode()}")
+    print(f"Variance\n {W.var()}")
+    
+    print("Test Data")
+    print(T.describe())
+    print(f"Mode\n {T.mode()}")
+    print(f"Variance\n {T.var()}")
+  
+    print("Testing Data")
     scatterPlot.scatterPlot()
     print("Obtaining Correlation Coefficients:")
     correlation.getCorrelation()
