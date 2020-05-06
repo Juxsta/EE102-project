@@ -1,4 +1,6 @@
 import numpy as np
 from sklearn.linear_model.base import LinearRegression
-def mse(model:LinearRegression,x:np.ndarray,y:np.ndarray):
-    model.predict()
+from project.data.variables import T,L
+def mse(model:LinearRegression,X):
+    m=(len(L)-7700)
+    return np.sum((T["PE"]-model.predict(X))**2/m)
