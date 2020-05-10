@@ -1,8 +1,9 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from project.data.variables import W,T
-from project.linearRegression import mse
-
+from project.linearRegression import mse,normalize
+W=normalize(W)
+T=normalize(T)
 
 def regression():
     x = np.column_stack((W.AT.to_numpy(),W.V.to_numpy(),W.AP.to_numpy()))

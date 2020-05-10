@@ -5,11 +5,13 @@ from project.linearRegression import oneVariable,twoVariable,threeVariable
 def run():
     print("Working Data")
     print(W.describe())
+    print("Median\n",W.median())
     print(f"Mode\n {W.mode()}")
     print(f"Variance\n {W.var()}")
     
     print("Test Data")
     print(T.describe())
+    print("Median\n",T.median())
     print(f"Mode\n {T.mode()}")
     print(f"Variance\n {T.var()}")
   

@@ -6,6 +6,9 @@ from project.data.variables import W
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+dirpath = os.getcwd()
+output_path = os.path.join(dirpath,'scatterplot.png')
 #%%
 def scatterplot_matrix(df:DataFrame, names, **kwargs):
     """Plots a scatterplot matrix of subplots.  Each row of "data" is plotted
@@ -58,7 +61,7 @@ def scatterPlot():
     fig = scatterplot_matrix(df, df.columns.values,
             linestyle='none', marker='.', color='blue', mfc='none')
     fig.suptitle('ScatterPlot Matrix')
-    plt.savefig("scatterplot.png")
+    plt.savefig(output_path)
     #%%
 
 # %%

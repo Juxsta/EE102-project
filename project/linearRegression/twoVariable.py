@@ -1,8 +1,10 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from project.data.variables import W,T
-from project.linearRegression import mse
+from project.linearRegression import mse,normalize
 
+W=normalize(W)
+T=normalize(T)
 
 def regression():
     getX = lambda set,name: set[name].to_numpy().reshape(-1,1)
